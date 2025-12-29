@@ -1,27 +1,38 @@
-House Price Prediction
+# House Rent Prediction
 
-This is a very small machine learning project I did while learning the basics.
-I used one feature (house size) to predict the house price using linear regression.
+This project predicts house rent using multiple features such as house size, number of bedrooms (BHK), furnishing status, and floor information.
 
-I didn’t use sklearn for training. Instead, I wrote gradient descent manually so I can understand:
+The purpose of this project is to learn how a complete machine learning pipeline works, from data preprocessing to model evaluation.
 
-how the line is fitted
+---
 
-what the cost function does
+## What the Project Includes
 
-how w and b update every iteration
+- Cleaning and preparing the dataset
+- Converting categorical features using one-hot encoding
+- Scaling numerical features using Z-score normalization
+- Splitting data into training, validation, and test sets
+- Training polynomial regression models (degrees 1 to 3)
+- Applying Ridge regularization to reduce overfitting
+- Selecting the best model using validation MSE
+- Evaluating final performance on a test dataset
+- Making predictions on new house inputs
 
-The code loads the data, runs gradient descent, and then plots the final line.
+---
 
-How to run
-python ml_gradient_descent.py
+## Model Overview
 
-What it prints
+- Regression type: Polynomial Linear Regression
+- Regularization: Ridge (L2)
+- Evaluation metric: Mean Squared Error (MSE)
+- Implementation: scikit-learn
 
-final w, b
+The model with the lowest validation error is selected and then tested on unseen data.
 
-training loss
+---
 
-a sample prediction
+## How to Run the Project
 
-The main purpose of this project was to understand gradient descent.
+```bash
+pip install numpy pandas scikit-learn matplotlib
+python house_rent_prediction.py
